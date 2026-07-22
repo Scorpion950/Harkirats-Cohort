@@ -1,0 +1,20 @@
+# Local notes and scratch files
+notes.txt
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Lockfiles (optional, usually keep if you want reproducible installs)
+package-lock.json
+**/package-lock.json
+
+# OS/editor junk
+.DS_Store
+.vscode/
