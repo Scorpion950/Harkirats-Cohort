@@ -1,0 +1,15 @@
+<body>
+    <input type = "text"></input>
+    <button onclick="addTodo()">Add Todo</button>
+    <script>
+        function addTodo() {
+            const value = document.querySelector("input").value;
+
+            const newTodoDivEl = document.createElement("div");
+            newTodoDivEl.innerHTML = "<div>" + value +"</div><button> Delete></button>";
+            document.body.appendChild(newTodoDivEl);
+
+            
+        }
+    </script>
+</body>

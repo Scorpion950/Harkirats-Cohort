@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>sending background requests</title>
+</head>
+
+<body>
+    instagram feed using real instagram api
+    <div id="posts">
+    </div>
+</body>
+
+<script>
+    async function getRecentPost() {
+        console.log("before sending request");
+        const responce = await fetch("https://jsonplaceholder.typicode.com/posts/1")
+
+        const data = await responce.json(); // this converts data into json
+        console.log(data)
+        console.log("after sending request");
+        document.getElementById("posts").innerHTML = data.id;
+
+    }
+    getRecentPost();
+    alert("heyy you");
+</script>
+
+</html>

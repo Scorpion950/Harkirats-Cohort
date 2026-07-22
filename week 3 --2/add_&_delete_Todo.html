@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo App</title>
+</head>
+
+<body>
+
+  <input type="text" id="todoInput" placeholder="Enter todo">
+
+  <button onclick="addTodo()">Add todo!</button>
+
+  <button onclick="deleteLastTodo()">Delete last todo</button>
+
+  <button onclick="deleteFirstTodo()">Delete first todo</button>
+
+  <div id="todos"></div>
+
+  <script>
+
+    let todos = [];
+
+    function addTodo() {
+      const input = document.querySelector("#todoInput");
+
+      if (input.value.trim() === "") return;
+
+      todos.push({
+        title: input.value
+      });
+
+      input.value = ""; // clear input
+      render();
+    }
+
+    function deleteLastTodo() {
+      if (todos.length === 0) return;
+      todos.splice(todos.length - 1, 1);
+      render();
+    }
+
+    function deleteFirstTodo() {
+      if (todos.length === 0) return;
+      todos.splice(0, 1);
+      render();
+    }
+
+    function createTodoComponent(todo, index) {
+      const div = document.createElement("div");
+      const h1 = document.createElement("h3");
+      const button = document.createElement("button");
+
+      h1.innerHTML = todo.title;
+      button.innerHTML = "Delete";
+
+      // 🔥 Delete specific todo
+      button.onclick = function () {
+        todos.splice(index, 1);
+        render();
+      };
+
+      div.appendChild(h1);
+      div.appendChild(button);
+
+      return div;
+    }
+
+    function render() {
+      const todosDiv = document.querySelector("#todos");
+      todosDiv.innerHTML = "";
+
+      for (let i = 0; i < todos.length; i++) {
+        const element = createTodoComponent(todos[i], i);
+        todosDiv.appendChild(element);
+      }
+    }
+
+  </script>
+
+</body>
+</html>

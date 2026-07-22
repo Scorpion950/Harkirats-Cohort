@@ -1,0 +1,51 @@
+** DOM - The DOM Tree
+When a web page loads, the browser creates a tree-like representation of the HTML document.
+Each part of the document are nodes in the tree. The HTML DOM can be used to access HTML elements.
+
+**DOM manipulation - writing the code for mostly static websites (it has elements like dynamic websites(linkedin,insta) but they are very few)... writing the manual code or html-js code which has to have all the logic is known as DOM manipulation, doing everything manual in hard way
+
+** setTimeout - 
+
+**setInerval(func(){
+
+},1000) -- this is the sec
+
+** The most common way to access an HTML element is to use the id of the element
+
+** Axios (library) (axios.get) - a popular, promise-based JavaScript library used to make HTTP requests from web browsers and Node.js environments
+
+** express (framework) - web application framework for Node.js. It provides a robust set of features to easily build server-side web applications, APIs, and microservices
+
+** sync and async - async is when an operation is started and it waits for other resourses, it will start the next operation and puts the current opearation at last of the line...
+                    and sync is used when we have to complete the operations sequentially it means it waits for the previous task to complete only then it starts the new task  
+
+** dyanamic route - /users/:id 
+** query parameter - /users?id=1&name=John 
+
+**middlewares - middlewares is function that have access to req,res and next (it controls it, and we can control who can access our website and number of requests)... this is mostly used for authentication
+                it does the authentication process of tokens and cookies (using JWT,bcrypt like that) 
+
+**JWT - we need to add a decrypted JWT token for the browser, to understand our token (for signin, it stores only the username info)
+
+**CORS - 
+
+** function(req,res) - we use it from the starting to store our data (username,pass)... and whenever in the other functions we want to use the token or username we just need to add this req,res functions cause once this is updated they carry all the data afterwords
+
+**await -- 
+
+** React -- Is a framework used for simplyfying the web creation, its an automated tool for using DOM manipulation (it has virtual DOM inside it and it aumates the DOM manipulation)
+            it has 2 things - State(e.g.- home:0, noti: 99, messages:4) and components(how the home,messsages and noti looks like), 
+            state is for static websites(which have very few dynamic features) and state + 
+            components(how a DOM should render. It is re-usable, dynamic,HTML snippet that changes the given state) is used in react for dynamic websites
+(example - a button is a component, it takes state as an input for increasing the counter of it... A state change triggers a re render and a re render represents the acutal DOM manipulation when the state changes)
+
+**JSX stand for JS-XML. used in react, it allows you to write HTML like code directly within JS.
+
+**useState -- (use..(something)..) used to define the state of your application
+**useEffect -- maybe used for logging something on screen only once
+
+** mounting -- giving a program to run somehing or print something (it can run until infinity if not stopped)
+** unmounting-- stopping the mounted program (if not used it will run on the background too)
+**rerendering
+
+**conditional rendering - based on a certain condition render a component

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width,initial-scale= 1.0">
+    <title>Grid Layout2</title>
+    <style>
+        body{
+            font-family: arial,sans-serif;
+        }
+        .container{
+            background-color: black;
+            width: 1200px;
+            margin: 0 auto;
+            color: white;
+        }
+        .langaugePanel{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-inline: 2.5rem;
+        }
+        .languagePanel img{ /* use of this function/class is- any image that is inside the languagepanel class , this tiles will get added */
+            height: 40px;
+            width: auto;
+        }
+        .container{
+         display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        }
+        .flex{
+            display: flex;
+        }
+        .vertical-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+    </head>
+    <body>
+        <div class = "container">
+            <div>
+                <h2>Code in any language</h2>
+                <p>VS Code supports almost every major programming language. Several ship in the box, like JavaScript, TypeScript, CSS, and HTML, but extensions for others can be found in the VS Code Marketplace.</p>
+            </div>
+            <div class= "languagePanel">
+                <div class = flex>
+                    <img src= "" alt = "javascript">
+                    <code class="verticalCenter">JavaScript</code>
+                </div>
+            </div>
+    </body>

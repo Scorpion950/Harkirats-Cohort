@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width,initial-scale= 1.0">
+    <title>Grid Layout2</title>
+    <style>
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+
+        .left{
+            background-color: red;
+        }
+        .right{
+            background-color: blue;
+        }
+        .vertical-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .horizontal-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0 auto;
+        }
+        .grid1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class = "container">
+            <div class = "left">
+                <div>
+                    <div class = "horizontal-center">
+                        <h1>left</h1>
+                    </div>
+                </div>
+                <h3>
+                    text test teset tst tste tayt test test test test tset test tset
+                </h3>
+            </div>
+ 
+        <div class = "right">
+        <div class="grid1">
+            <h2>col1</h2>
+            <h2>col2</h2>
+            <h2>col3</h2>
+            <h2>col1</h2>
+            <h2>col2</h2>
+            <h2>col3</h2>
+            <h2>col1</h2>
+            <h2>col2</h2>
+            <h2>col3</h2>
+        </div>
+    </div>
+
+    </body>
+    </html>
