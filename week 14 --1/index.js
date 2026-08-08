@@ -1,8 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function sum(x, b) {
-    return x + b;
+function isLegal(age) {
+    if (age > 18) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
-let ans = sum(1, 2);
-console.log(ans);
+console.log(isLegal(2));
+function delayedCall(fn) {
+    setTimeout(fn, 1000);
+}
+delayedCall(function () {
+    console.log("Hello");
+});
 //# sourceMappingURL=index.js.map
