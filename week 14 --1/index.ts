@@ -1,5 +1,17 @@
-let x: number = 1;
+function isLegal(age: number): boolean {
+    if (age > 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+console.log(isLegal(2));
 
+function delayedCall(fn: () => void): void {
+    setTimeout(fn, 1000);
+}
 
-console.log(x)
+delayedCall(function () {
+    console.log("Hello");
+});
