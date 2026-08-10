@@ -14,3 +14,4 @@ const displayUserProfile = (user: UpdateProps) =>{//hit the db to update the use
     console.log(`Name: ${user.name}, Email: ${user.email}`);
 
 }
+

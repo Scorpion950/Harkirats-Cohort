@@ -1,1 +1,1 @@
-{"version":"7.0.2","root":["./src/pick.ts","./src/pre-req.ts"],"packageJsons":["./package.json"]}
+{"version":"7.0.2","root":["./src/exclude.ts","./src/partial.ts","./src/pick.ts","./src/pre-req.ts","./src/readonly.ts","./src/record_and_map.ts"],"packageJsons":["./package.json"]}
