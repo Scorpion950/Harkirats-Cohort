@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Brain</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="/">
+        <span class="brand-icon">B</span>
+        <span>Second Brain</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-item active" data-filter="all"><span>t</span>Tweets</button>
+        <button class="nav-item" data-filter="youtube"><span>v</span>Videos</button>
+        <button class="nav-item" data-filter="document"><span>d</span>Documents</button>
+        <button class="nav-item" data-filter="link"><span>l</span>Links</button>
+        <button class="nav-item" data-filter="tags"><span>#</span>Tags</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1>All Notes</h1>
+        <div class="actions">
+          <button id="authButton" class="button ghost">Sign In</button>
+          <button id="shareButton" class="button soft"><span>⌘</span>Share Brain</button>
+          <button id="addButton" class="button primary"><span>+</span>Add Content</button>
+        </div>
+      </header>
+
+      <section id="status" class="status" hidden></section>
+      <section id="contentGrid" class="content-grid"></section>
+    </main>
+
+    <div id="authModal" class="overlay" hidden>
+      <form id="authForm" class="modal">
+        <button class="close" type="button" data-close>&times;</button>
+        <h2>Welcome Back</h2>
+        <p>Sign in or create an account to save your second brain.</p>
+        <input id="username" name="username" placeholder="Username" autocomplete="username" minlength="3" maxlength="10" pattern="[A-Za-z]+" required />
+        <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" minlength="8" maxlength="20" required />
+        <div class="modal-actions">
+          <button class="button primary" type="submit">Sign In</button>
+          <button id="signupButton" class="button soft" type="button">Create Account</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="contentModal" class="overlay" hidden>
+      <form id="contentForm" class="modal">
+        <button class="close" type="button" data-close>&times;</button>
+        <h2>Add Content</h2>
+        <select id="contentType" name="type">
+          <option value="document">Document</option>
+          <option value="tweet">Tweet</option>
+          <option value="youtube">YouTube</option>
+          <option value="link">Link</option>
+        </select>
+        <input id="contentTitle" name="title" placeholder="Title" required />
+        <input id="contentLink" name="link" type="url" placeholder="https://example.com" required />
+        <input id="contentTags" name="tags" placeholder="tags, separated, by commas" />
+        <button class="button primary" type="submit">Add Content</button>
+      </form>
+    </div>
+
+    <div id="shareModal" class="overlay" hidden>
+      <div class="modal share-modal">
+        <button class="close" type="button" data-close>&times;</button>
+        <h2>Share Your Second Brain</h2>
+        <p>Share your entire collection of notes, documents, tweets, and videos with others. They'll be able to import your content into their own Second Brain.</p>
+        <button id="createShareButton" class="button primary wide">▣ Share Brain</button>
+        <input id="shareLink" class="share-link" readonly hidden />
+        <button id="disableShareButton" class="button soft wide" type="button">Disable Sharing</button>
+        <span id="shareCount">0 items will be shared</span>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
