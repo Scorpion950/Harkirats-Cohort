@@ -1,4 +1,4 @@
-import {ReactElement} from "react";
+import {type ReactElement} from "react";
 
 type Variants = "primary" | "secondary"
 
@@ -7,8 +7,8 @@ export interface ButtonProps {
   variant: "primary" | "secondary";
   size: "sm" | "md" | "lg";
   text: string;
-  startIcon?: any;
-  endIcon?: any;
+  startIcon?: ReactElement;
+  endIcon?: ReactElement;
   onClick: () => void;
 }
 
