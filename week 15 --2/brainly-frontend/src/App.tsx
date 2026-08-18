@@ -1,15 +1,16 @@
 import './App.css'
 import { Button } from "./components/ui/Button";
+import { PlusIcon } from "./icons/PlusIcon";
 
 function App() {
   return (
     <>
-      <Button
+      <Button 
         variant="primary"
         size="md"
-        text="Click me"
-        startIcon="-"
-        endIcon="+"
+        text="Share"
+        startIcon={<PlusIcon />}
+        endIcon="-"
         onClick={() => {
           console.log("Button clicked");
         }}
@@ -18,7 +19,7 @@ function App() {
       <Button
         variant="primary"
         size="lg"
-        text="Click me"
+        text="Add Content"
         startIcon="-"
         endIcon="+"
         onClick={() => {
