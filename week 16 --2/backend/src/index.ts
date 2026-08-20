@@ -49,5 +49,5 @@ wss.on("connection", (socket: WebSocket) => {
 
             console.log(currentUserRoom);
         }
-    });
+    });  
 });
