@@ -24,3 +24,40 @@ package-lock.json
 .dist
 dist/
 **/dist/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Framework and build output
+.next/
+out/
+build/
+dist-ssr/
+
+# Test and tool caches
+coverage/
+.nyc_output/
+.vite/
+.cache/
+.turbo/
+.vercel/
+
+# Local package-manager state
+.pnp/
+.pnp.*
+.pnpm-store/
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+temp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Generated Next.js and local key files
+next-env.d.ts
+*.pem
