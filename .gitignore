@@ -1,55 +1,64 @@
-# Local notes and scratch files
+# Local notes
 notes.txt
 
-# Dependencies
+# Dependencies and package-manager state
 node_modules/
-**/node_modules/
-
-# Environment files
-.env
-.env.*
-**/.env
-**/.env.*
-
-# Lockfiles (optional, usually keep if you want reproducible installs)
-package-lock.json
-**/package-lock.json
-
-# OS/editor junk
-.DS_Store
-
-
-.vscode/
-
-.dist
-dist/
-**/dist/
-
-# TypeScript build info
-*.tsbuildinfo
-
-# Framework and build output
-.next/
-out/
-build/
-dist-ssr/
-
-# Test and tool caches
-coverage/
-.nyc_output/
-.vite/
-.cache/
-.turbo/
-.vercel/
-
-# Local package-manager state
 .pnp/
 .pnp.*
+**/.yarn/install-state.gz
+**/.yarn/cache/
+**/.yarn/unplugged/
 .pnpm-store/
 
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Build output and framework-generated files
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.angular/
+dist-ssr/
+next-env.d.ts
+
+# Bundler, framework, and deployment caches
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+.vercel/
+.netlify/
+.serverless/
+.webpack/
+
+# Test, coverage, and tooling output
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+.eslintcache
+.stylelintcache
+
+# TypeScript and generated metadata
+*.tsbuildinfo
+*.tsbuildinfo.tmp
+
 # Logs and temporary files
-logs/
 *.log
+logs/
 tmp/
 temp/
 npm-debug.log*
@@ -58,6 +67,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Generated Next.js and local key files
-next-env.d.ts
-*.pem
+# Local databases and runtime files
+*.sqlite
+*.sqlite3
+*.db
+*.pid
+
+# Editors and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
