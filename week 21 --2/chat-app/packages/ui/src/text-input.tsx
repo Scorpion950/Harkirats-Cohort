@@ -1,11 +1,12 @@
 interface PropType{
   placeholder:string;
-  size: "big" | "small",
+  size: "big" | "small";
 }
 
 export function TextInput({
   placeholder,
-  size
+  size,
+  
 }:PropType) {
   return <input placeholder = {placeholder} style = {{
             padding: size === "big" ? 20:10,
